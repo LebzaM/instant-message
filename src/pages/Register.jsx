@@ -7,7 +7,7 @@ import {  ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { Link, useNavigate } from 'react-router-dom';
 import {useState} from 'react'
-import CircularProgress from '@mui/material/CircularProgress';
+
 
 
 
@@ -90,7 +90,7 @@ const Register = () => {
 
             <button disabled={loading}>Sign Up</button>
             <div style={{alignItems:'center', display:'flex', justifyContent:'center'}}>
-            {loading && <CircularProgress />}
+            {loading && <span>Loading...</span>}
             </div>
             <div style={{alignItems:'center', display:'flex', justifyContent:'center'}}>
             {err && <span>Try again</span>}
