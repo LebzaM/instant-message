@@ -56,6 +56,6 @@ const Chats = () => {
     
     </div>
   )
-}
+};
 
 export default Chats
