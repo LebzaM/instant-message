@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { collection, query, where, getDocs, setDoc, updateDoc, serverTimestamp, getDoc, doc} from "firebase/firestore";
 import {db} from '../Firebase'
 import { AuthContext } from '../context/AuthContext';
+import searchico from '../img/searchicon.png';
 const Search = () => {
   const [username, setUsername] = useState("")
   const [user, setUser] = useState(null)
@@ -71,7 +72,10 @@ const handleSelect= async ()=>{
     <div className='search'>
       <div className='searchForm'>
         <input type="text" placeholder='Find Someone' onKeyDown={HandleKey} value={username}onChange={(e)=>setUsername(e.target.value)}/>
-
+        <img src={searchico} width='5%' height='5%' style={{display:'flex'}} className='searchicon'/>
+        {/* <div className='searchicon'>
+          <img src={searchico} width='5%' height='5%'/>
+        </div> */}
       </div>
       
       {user && <div className="userChat" onClick={handleSelect}>

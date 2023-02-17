@@ -112,7 +112,7 @@
         overflow: hidden;
         @include mobile{
             display: block;
-            background-color: white;  //ended  here 14:31
+            background-color: #3e3c61;  //ended  here 14:31
             
             
         }
@@ -184,11 +184,13 @@
 
                 }
                 button{
-                    background-color: #5d5b8d;
-                    color: #ddddf7;
-                    font-size: 10px;
                     border: none;
+                    font-size: 15px;
+                    color: white;
+                    background-color: #8da4f1 ;
                     cursor: pointer;
+                    font-family: 'Times new roman ';
+                    border-radius: 5px;
                     @include mobile{
                         border: none;
                         padding: 10px ;
@@ -201,15 +203,21 @@
             }
         }
             .search{
-                border-bottom: 1px solid grey;
+                border-bottom: 2px solid grey;
                 .searchForm{
                     padding: 10px;
+                    display: flex;
+                    
                     @include mobile{
                         // padding-top: 100px;
                         display: flex;
                         height: 50px;
                         width: 100px;
                         padding-right: 50px;
+
+                        .searchicon{
+                            display: none;
+                        }
 
                         
                     }
@@ -322,7 +330,7 @@
             overflow-x: hidden;
             @include mobile{
                 
-              height: calc(100vh - 280px);
+              height: calc(100vh - 240px); // prev was 280px
              }
             
 
@@ -417,9 +425,12 @@
                     color: white;
                     background-color: #8da4f1 ;
                     cursor: pointer;
+                    font-size: 15px;
+                    font-family: 'Times new roman ';
+                    border-radius: 5px;
 
                     &:hover{
-                        background-color: #2f2d52;
+                        background-color: rgb(63, 219, 24);
                     }
                 }
             }
