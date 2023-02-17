@@ -9,10 +9,8 @@ const Chats = () => {
   const [chats, setChats] = useState([]);
   const {currentUser}= useContext(AuthContext)
   const {dispatch}= useContext(ChatContext)
-  const [visible, setVisible] = useState(true);
-  const removeElement =()=>{
-    setVisible((prev) => !prev)
-  }
+  
+
   useEffect(() => {
     const getChats=()=>{
     const unsub = onSnapshot(doc(db, "userChats", currentUser.uid), (doc) => {
@@ -30,12 +28,17 @@ const Chats = () => {
   const handleSelect=(u)=>{
     dispatch({type:"CHANGE_USER", payload: u})
   };
+
+  
+  
+  
   return (
     <div className='chats'>
        {/* { visible && (
         <button onClick={removeElement}>X</button>
       )} */}
       {Object.entries(chats)?.sort((a,b)=>b[1].date - a[1].date).map((chat)=>(
+
       <div className="userChat" key={chat[0]} onClick={()=>handleSelect(chat[1].userInfo)}>
 
         <img src={chat[1].userInfo.photoURL}/>
@@ -45,16 +48,18 @@ const Chats = () => {
         <p>{chat[1].lastMessage?.text}</p>
         
       </div>
-     
+      
       </div>
       
+      
       ))}
-
+      
       
 
       
     
     </div>
+    
   )
 };
 

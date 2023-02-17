@@ -245,8 +245,10 @@
                 cursor: pointer;
                  @include mobile{  
                     overflow: scroll;
-                    overflow-x: hidden;
+                    overflow-x: scroll;
                     padding: 5%;
+                    display: table-cell;
+
                     
                    
              }
