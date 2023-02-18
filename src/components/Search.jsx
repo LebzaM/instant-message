@@ -26,9 +26,9 @@ const handleSearch= async ()=>{
 
 };
 const HandleKey =(e)=>{
-  e.code === "Enter" && handleSearch()
+  e.key === "Enter" && handleSearch() 
 }
-
+//changed from e.code to e.key
 const handleSelect= async ()=>{
   // check if the group(chats stored in firestore ) exits, if they do not exist, create a new one
 
