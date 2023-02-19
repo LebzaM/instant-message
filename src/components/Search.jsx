@@ -26,9 +26,9 @@ const handleSearch= async ()=>{
 
 };
 const HandleKey =(e)=>{
-  
-  e.keyCode === 13 && handleSearch() 
-  e.preventDefault()
+  if(e.keyCode === 13){
+   handleSearch() }
+ 
 }
 //changed from e.code to e.key to 13
 const handleSelect= async ()=>{
