@@ -120,12 +120,13 @@
         .sidebar{
         flex: 1;
         background-color: #3e3c61;
+        
         @include mobile{
             
             flex: 1;
             display: flex;
             overflow: scroll;
-            overflow-x: hidden;
+            overflow-x: scroll;
             padding-bottom: 10px
             
            

@@ -26,7 +26,7 @@ const handleSearch= async ()=>{
 
 };
 const HandleKey =(e)=>{
-  e.key === 13 && handleSearch() 
+  e.key === '13' && handleSearch() 
 }
 //changed from e.code to e.key to 13
 const handleSelect= async ()=>{
