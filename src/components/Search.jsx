@@ -25,9 +25,9 @@ const handleSearch= async ()=>{
   }
 
 };
-const HandleKey =(e)=>{
-  e.preventDefault();
-  if(e.keyCode === 13 || e.which === 13){
+const HandleKey =(event)=>{
+  
+  if(event.keyCode === 13 || event.which === 13){
    handleSearch() }
  
 }
@@ -74,7 +74,8 @@ const handleSelect= async ()=>{
   return (
     <div className='search'>
       <div className='searchForm'>
-        <input type="text" placeholder='Find Someone' onKeyDown={HandleKey} value={username}onChange={(e)=>setUsername(e.target.value)}/>
+        
+        <input type="text" placeholder='Find Someone' onKeyDown={HandleKey} value={username} onChange={(e)=>setUsername(e.target.value)}/>
         {/* <img src={searchico} width='5%' height='5%' style={{display:'flex'}} className='searchicon'/> */}
         {/* <div className='searchicon'>
           <img src={searchico} width='5%' height='5%'/>
