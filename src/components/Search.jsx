@@ -75,7 +75,7 @@ const handleSelect= async ()=>{
     <div className='search'>
       <div className='searchForm'>
         
-        <input type="search"  placeholder='Find Someone' onKeyDown={HandleKey} value={username} onChange={(e)=>setUsername(e.target.value)}/>
+        <input type='search'  placeholder='Find Someone' onKeyDown={HandleKey} value={username} onChange={(e)=>setUsername(e.target.value)}/>
         {/* <img src={searchico} width='5%' height='5%' style={{display:'flex'}} className='searchicon'/> */}
         {/* <div className='searchicon'>
           <img src={searchico} width='5%' height='5%'/>
