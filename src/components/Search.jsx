@@ -26,7 +26,7 @@ const handleSearch= async ()=>{
 
 };
 const HandleKey =(e)=>{
-  if(e.keyCode === 13){
+  if(e.keyCode === 13 || e.which === 13){
    handleSearch() }
  
 }

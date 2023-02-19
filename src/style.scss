@@ -126,7 +126,7 @@
             flex: 1;
             display: flex;
             
-            overflow-x: scroll;
+           
             padding-bottom: 10px
             
            
@@ -245,8 +245,7 @@
                 color: white;
                 cursor: pointer;
                  @include mobile{  
-                    overflow: scroll;
-                    overflow-x: scroll;
+                    
                     padding: 5%;
                     display: table-cell;
 
