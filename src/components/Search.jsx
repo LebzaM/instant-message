@@ -26,6 +26,7 @@ const handleSearch= async ()=>{
 
 };
 const HandleKey =(e)=>{
+  e.preventDefault();
   if(e.keyCode === 13 || e.which === 13){
    handleSearch() }
  
