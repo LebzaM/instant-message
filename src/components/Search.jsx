@@ -25,11 +25,11 @@ const handleSearch= async ()=>{
   }
 
 };
-const HandleKey =(event)=>{
+const HandleKey =(e)=>{
   
-  if(event.keyCode === 13 || event.keyCode === 229){
+  if(e.keyCode === 13 || e.keyCode === 13){
    handleSearch() }
- 
+   
 }
 //changed from e.code to e.key to 13
 const handleSelect= async ()=>{
@@ -73,14 +73,14 @@ const handleSelect= async ()=>{
 }
   return (
     <div className='search'>
-      <div className='searchForm'>
+      <form className='searchForm'>
         
         <input type="text" placeholder='Find Someone' onKeyDown={HandleKey} value={username} onChange={(e)=>setUsername(e.target.value)}/>
         {/* <img src={searchico} width='5%' height='5%' style={{display:'flex'}} className='searchicon'/> */}
         {/* <div className='searchicon'>
           <img src={searchico} width='5%' height='5%'/>
         </div> */}
-      </div>
+      </form>
       
       {user && <div className="userChat" onClick={handleSelect}>
         <img src={user.photoURL}/>
