@@ -73,7 +73,7 @@
             color: #3e3c61;
             font-family: 'Geneva';
             font-style:oblique;
-            font-weight: bol;
+            font-weight: bold;
           }
         form{
             display: flex;
@@ -178,8 +178,11 @@
                     font-size: 30px;
                     font-family: 'Impact';
                     
-                    letter-spacing: 10px;
-                    color: aqua;
+                    letter-spacing: 5px;
+                    color: #5d5b8d;
+                    @include tablet{
+                        display: none;
+                    }
                 @include mobile{
                     display: none;
                 }
@@ -277,7 +280,7 @@
                 cursor: pointer;
                  @include mobile{  
                     
-                    padding: 5%;
+                    padding: 3px;
                     display: table-cell;
 
                     
@@ -295,6 +298,7 @@
                     @include mobile{
                         width: 30px;
                         height: 30px;
+                        padding-top: 5px;
                     }
                 }
                 .userChatInfo{
