@@ -7,7 +7,7 @@ import {  ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { Link, useNavigate } from 'react-router-dom';
 import {useState} from 'react'
-
+import loginico from '../img/loginpic.png'
 
 
 
@@ -76,6 +76,8 @@ const Register = () => {
     <div className='formContainer'>
         <div className='formWrapper'>
             <span className='logo'>Chatty</span>
+            <span className='slogan'>-A new way to chat</span>
+            <img src={loginico} height='80px' className='loginpic'></img>
             <span className='title'>Register</span>
            <form onSubmit={handleSubmit}>
             <input required type='text' placeholder='username'/>

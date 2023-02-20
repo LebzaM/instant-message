@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import {useState} from 'react'
 import {auth, storage, db} from '../Firebase'
 import {signInWithEmailAndPassword} from "firebase/auth";
-
+import loginico from '../img/loginpic.png'
 const Login = () => {
 
   const [err, setErr] = useState(false);
@@ -22,9 +22,12 @@ const Login = () => {
     }
   }
   return (
+    
     <div className='formContainer'>
     <div className='formWrapper'>
         <span className='logo'>Chatty</span>
+        <span className='slogan'>-A new way to chat</span>
+        <img src={loginico} height='80px' className='loginpic'></img>
         <span className='title'>Login</span>
        <form onSubmit={handleSubmit}>
         
@@ -42,6 +45,7 @@ const Login = () => {
 
     </div>
 </div>
+
   )
 }
 

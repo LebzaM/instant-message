@@ -26,8 +26,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
+    background-image: url('./img/bg.png') ;
+
+   
 
     .formWrapper{
         background-color: white;
@@ -37,18 +38,42 @@
         flex-direction: column;
         gap: 10px;
         align-items: center;
-        
+        z-index: 999;
 
+        @include mobile{
+            border-radius: 15px;
+            width: 50%;
+        }
+        
+        
+        .loginpic{
+            -webkit-animation: mover 2s infinite  alternate;
+            animation: mover 2s infinite  alternate;
+            @keyframes mover {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(-17px); }
+            }
+        }
         .logo {
             color: #5d5b8d;
             font-weight: bold;
-            font-size: 24px;
+            font-size: 30px;
+            font-family: 'Impact';
+            
       
           }
         
         .title {
             color: #5d5b8d;
             font-size: 20px;
+            font-family: 'Geneva';
+          }
+          .slogan{
+            font-size: 18px;
+            color: #3e3c61;
+            font-family: 'Geneva';
+            font-style:oblique;
+            font-weight: bol;
           }
         form{
             display: flex;
@@ -149,7 +174,12 @@
             }
             //Finished here 23:50
             .title{
-                font-weight: bold;
+                    font-weight: bold;
+                    font-size: 30px;
+                    font-family: 'Impact';
+                    
+                    letter-spacing: 10px;
+                    color: aqua;
                 @include mobile{
                     display: none;
                 }
@@ -192,6 +222,7 @@
                     cursor: pointer;
                     font-family: 'Times new roman ';
                     border-radius: 5px;
+                    
                     @include mobile{
                         border: none;
                         padding: 10px ;
@@ -270,6 +301,10 @@
                     span{
                         font-size: 18px;
                         font-weight: 500;
+                        @include mobile{
+                            font-size: 10px;
+                            font-weight: bold;
+                        }
                     }
                     p{
                         font-size: 14px;
@@ -305,6 +340,7 @@
 
             span{
                 padding-left: 45%;
+                font-family: 'Cochin';
             }
             
 
@@ -364,9 +400,10 @@
                 p{
                     background-color: rgb(63, 219, 24);
                     padding: 10px 20px;
-                    border-radius: 0px 10px 10px 10px;
+                    border-radius: 0px 30px 30px 30px;
                     max-width: max-content;
                     color: white;
+                    font-family: 'Segoe UI';
                    
                 }
                 img{
@@ -382,7 +419,7 @@
                 p{
                     background-color: #426bf3;
                     color: white;
-                    border-radius: 10px 0px 10px 10px;
+                    border-radius: 30px 0px 30px 30px;
                     
                 }
             }
@@ -416,7 +453,7 @@
                 gap: 10px;
 
                 img{
-                    height: 24px;
+                    height: 30px; //was 24px
                     cursor: pointer;
 
                 }
