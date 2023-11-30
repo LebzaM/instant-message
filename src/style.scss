@@ -55,7 +55,7 @@
             }
         }
         .logo {
-            color: #5d5b8d;
+            color: #4F6369;
             font-weight: bold;
             font-size: 30px;
             font-family: 'Impact';
@@ -121,7 +121,7 @@
 }
 
 .home{
-    background-color: #a7bcff;
+    background-color: #dce3e5;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -132,20 +132,23 @@
         border-radius: 10px;
         height: 100vh;
         width: 100vw;
+        margin: 5%;
+        
     
         display: flex;
         overflow: hidden;
         @include mobile{
             display: block;
-            background-color: #3e3c61;  //ended  here 14:31
+            background-color: #3e3c61;  
+            margin: 0;
             
             
         }
 
         .sidebar{
         flex: 1;
-        background-color: #3e3c61;
-        overflow: scroll;
+        background-color: #4F6369;
+        overflow: auto;
         @include mobile{
             
             flex: 1;
@@ -163,14 +166,15 @@
         .navbar{
             display: flex;
             align-items: center;
-            background-color: #2f2d52;
+            background-color: #4F6369;
+           
             height: 50px;
             padding: 10px;
             justify-content: space-between;
             color: #ddddf7;
             @include mobile{
                 display: flex;
-                background-color:#3e3c61 ;
+                background-color:#4F6369 ;
             }
             //Finished here 23:50
             .title{
@@ -179,7 +183,7 @@
                     font-family: 'Impact';
                     
                     letter-spacing: 5px;
-                    color: #5d5b8d;
+                    color: #b9c7ca;
                     @include tablet{
                         display: none;
                     }
@@ -287,7 +291,7 @@
                    
              }
                 &:hover{
-                    background-color: #2f2d52;
+                    background-color: #46585d;
                 }
 
                 img{
@@ -335,7 +339,7 @@
         }
         .chatInfo{
             height: 50px;
-            background-color: #5d5b8d;
+            background-color: #46585d;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -365,11 +369,11 @@
        
 
         .messages{
-            background-color: #ddddf7;
+            background-color: #b9c7ca;
             padding: 10px;
             height: calc(100% - 160px);
-            overflow: scroll;
-            overflow-x: hidden;
+            overflow: auto;
+            
             @include mobile{
                 
               height: calc(100vh - 240px); // prev was 280px

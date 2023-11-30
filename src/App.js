@@ -7,6 +7,10 @@ import {BrowserRouter, Routes, Route, useNavigate, Navigate} from "react-router-
 import { AuthContext } from './context/AuthContext';
 import {useContext} from 'react'
 function App() {
+
+  setTimeout(()=>{
+
+  }, "3000") 
   const { currentUser } =useContext(AuthContext)
  
   //React protected Router
